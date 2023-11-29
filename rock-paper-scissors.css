@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.move-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.move-btn {
+  margin-right: 15px;
+  background-color: transparent;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid whitesmoke;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.move-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.reset-btn {
+  font-size: 15px;
+  background-color: rgb(137, 26, 48);
+  color: whitesmoke;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.15s, margin 0.15s;
+}
+
+.reset-btn:hover {
+  opacity: 0.8;
+}
+
+.reset-btn:active {
+  margin: 2px 0 0 2px;
+}
+
+.result {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.score {
+  margin-top: 60px;
+}
