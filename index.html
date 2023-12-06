@@ -7,53 +7,54 @@
     <link rel="stylesheet" href="rock-paper-scissors.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <button
-      onclick="
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <button
+        onclick="
       computerMove = pickComputerMove();
       playGame('rock');
     "
-      class="move-btn"
-    >
-      <img class="move-icon" src="Images/rock-emoji.png" alt="" />
-    </button>
+        class="move-btn"
+      >
+        <img class="move-icon" src="Images/rock-emoji.png" alt="" />
+      </button>
 
-    <button
-      onclick="
+      <button
+        onclick="
     computerMove = pickComputerMove();
     playGame('paper'); 
   "
-      class="move-btn"
-    >
-      <img class="move-icon" src="Images/paper-emoji.png" alt="" />
-    </button>
+        class="move-btn"
+      >
+        <img class="move-icon" src="Images/paper-emoji.png" alt="" />
+      </button>
 
-    <button
-      onclick="
+      <button
+        onclick="
     computerMove = pickComputerMove();
     playGame('scissors');
   "
-      class="move-btn"
-    >
-      <img class="move-icon" src="Images/scissors-emoji.png" alt="" />
-    </button>
-    <p class="js-result result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score score"></p>
+        class="move-btn"
+      >
+        <img class="move-icon" src="Images/scissors-emoji.png" alt="" />
+      </button>
+      <p class="js-result result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
 
-    <button
-      onclick="
+      <button
+        onclick="
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
       updateScoreElement();
     "
-      class="reset-btn"
-    >
-      Reset score
-    </button>
-
+        class="reset-btn"
+      >
+        Reset score
+      </button>
+    </div>
     <script src="rock-paper-scissors.js"></script>
   </body>
 </html>
