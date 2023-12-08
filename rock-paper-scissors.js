@@ -13,19 +13,32 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 // }
 updateScoreElement();
 
-let isAutoPlaying = false;
+// This is for one button
+
+// let isAutoPlaying = false;
+// let intervalId;
+// function autoPlay() {
+//   if (!isAutoPlaying) {
+//     intervalId = setInterval(function () {
+//       const playerMove = pickComputerMove();
+//       playGame(playerMove);
+//     }, 1000);
+//     isAutoPlaying = true;
+//   } else {
+//     clearInterval(intervalId);
+//     isAutoPlaying = false;
+//   }
+// }
+
 let intervalId;
 function autoPlay() {
-  if (!isAutoPlaying) {
-    intervalId = setInterval(function () {
-      const playerMove = pickComputerMove();
-      playGame(playerMove);
-    }, 1000);
-    isAutoPlaying = true;
-  } else {
-    clearInterval(intervalId);
-    isAutoPlaying = false;
-  }
+  intervalId = setInterval(function () {
+    const playerMove = pickComputerMove();
+    playGame(playerMove);
+  }, 1000);
+}
+function stopAutoPlay() {
+  clearInterval(intervalId);
 }
 
 function playGame(playerMove) {

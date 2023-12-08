@@ -35,7 +35,8 @@ p {
 }
 
 .reset-btn,
-.auto-play-btn {
+.auto-play-btn,
+.stop-auto-play-btn {
   font-size: 15px;
   background-color: rgb(137, 26, 48);
   color: whitesmoke;
@@ -47,16 +48,18 @@ p {
 }
 
 .auto-play-btn {
-  background-color: rgb(10, 96, 107);
+  background-color: rgb(26, 160, 37);
 }
 
 .reset-btn:hover,
-.auto-play-btn:hover {
+.auto-play-btn:hover,
+.stop-auto-play-btn:hover {
   opacity: 0.8;
 }
 
 .reset-btn:active,
-.auto-play-btn:active {
+.auto-play-btn:active,
+.stop-auto-play-btn:active {
   margin: 2px 0 0 2px;
 }
 
