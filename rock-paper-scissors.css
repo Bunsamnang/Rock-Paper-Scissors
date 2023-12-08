@@ -34,7 +34,8 @@ p {
   opacity: 0.5;
 }
 
-.reset-btn {
+.reset-btn,
+.auto-play-btn {
   font-size: 15px;
   background-color: rgb(137, 26, 48);
   color: whitesmoke;
@@ -45,11 +46,17 @@ p {
   transition: opacity 0.15s, margin 0.15s;
 }
 
-.reset-btn:hover {
+.auto-play-btn {
+  background-color: rgb(10, 96, 107);
+}
+
+.reset-btn:hover,
+.auto-play-btn:hover {
   opacity: 0.8;
 }
 
-.reset-btn:active {
+.reset-btn:active,
+.auto-play-btn:active {
   margin: 2px 0 0 2px;
 }
 
