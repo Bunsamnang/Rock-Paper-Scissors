@@ -13,32 +13,29 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 // }
 updateScoreElement();
 
-// This is for one button
-
-// let isAutoPlaying = false;
-// let intervalId;
-// function autoPlay() {
-//   if (!isAutoPlaying) {
-//     intervalId = setInterval(function () {
-//       const playerMove = pickComputerMove();
-//       playGame(playerMove);
-//     }, 1000);
-//     isAutoPlaying = true;
-//   } else {
-//     clearInterval(intervalId);
-//     isAutoPlaying = false;
-//   }
-// }
-
+let isAutoPlaying = false;
 let intervalId;
 function autoPlay() {
-  intervalId = setInterval(function () {
-    const playerMove = pickComputerMove();
-    playGame(playerMove);
-  }, 1000);
-}
-function stopAutoPlay() {
-  clearInterval(intervalId);
+  // If it's indeed auto-playing
+  if (!isAutoPlaying) {
+    // To stop setInterval later, we need to give a variable to store id of setInterval
+    intervalId = setInterval(function () {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
+    isAutoPlaying = true;
+    const changeText = document.querySelector(".js-auto-play-btn");
+    changeText.innerHTML = "Stop Auto Play";
+    changeText.style.backgroundColor = "rgb(137, 26, 48)";
+
+    // If it's not auto-playing
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+    const changeText = document.querySelector(".js-auto-play-btn");
+    changeText.innerHTML = "Auto Play";
+    changeText.style.backgroundColor = "rgb(26, 160, 37)";
+  }
 }
 
 function playGame(playerMove) {
