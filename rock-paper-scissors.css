@@ -69,7 +69,7 @@ body {
   margin-top: 60px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 500px) {
   .move-btn {
     width: 110px;
     height: 110px;
