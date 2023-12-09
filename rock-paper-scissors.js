@@ -44,7 +44,7 @@ function playGame(playerMove) {
   if (playerMove === "scissors") {
     if (computerMove === "rock") {
       result = "You lose.";
-    } else if (computerMove === "saper") {
+    } else if (computerMove === "paper") {
       result = "You win.";
     } else if (computerMove === "scissors") {
       result = "It's a tie.";

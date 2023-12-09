@@ -30,6 +30,10 @@ body {
   opacity: 0.5;
 }
 
+.move-btn:active {
+  transform: scale(1.2);
+}
+
 .reset-btn,
 .auto-play-btn,
 .stop-auto-play-btn {
