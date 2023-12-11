@@ -19,7 +19,7 @@ function autoPlay() {
   // If it's indeed auto-playing
   if (!isAutoPlaying) {
     // To stop setInterval later, we need to give a variable to store id of setInterval
-    intervalId = setInterval(function () {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
